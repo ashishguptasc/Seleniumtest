@@ -1,19 +1,22 @@
-name: py
+name: On Push Run
 
+on: push
 
+env:
+  DEVOPS_DIR: sel-test
 
 jobs:
-  build:
+  hello-world:
+    name: Hello world
     runs-on: ubuntu-latest
-
     steps:
-      - name: checkout repo content
-        uses: actions/checkout@v2 # checkout the repository content to github runner.
-      - name: setup python
-        uses: actions/setup-python@v2
-           python-version:3 #install the python needed
-       ref: # branch
-            sel-test
-      - name: execute py script # run file
-        run: |
-          python main.py
+    - name: Check-out devops repository
+      uses: actions/checkout@v2
+      with:
+        repository: sel-test
+        token: ${{ secrets.GITHUB_TOKEN }}
+        path: ${{ env.DEVOPS_DIR }}
+
+    - name: Hello World
+      run: python ${{ env.DEVOPS_DIR }}/main.py
+      shell: sh
