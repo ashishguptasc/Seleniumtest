@@ -1,9 +1,5 @@
 name: py
-on:
-  schedule:
-    - cron: "* * * * *"    #runs at 11:30 UTC everyday
-
-jobs:
+ jobs:
   build:
     runs-on: ubuntu-latest
 
