@@ -11,9 +11,8 @@ jobs:
         uses: actions/checkout@v2 # checkout the repository content to github runner.
       - name: setup python
         uses: actions/setup-python@v2
-        with:
-         python-version: 3 #install the python needed
-           ref: # branch
+           python-version:3 #install the python needed
+       ref: # branch
             sel-test
       - name: execute py script # run file
         run: |
