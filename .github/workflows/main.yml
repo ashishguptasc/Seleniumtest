@@ -12,13 +12,8 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v2
         with:
-         python-version: 3.8 #install the python needed
-      - name: Install dependencies
-        run: |
-            python -m pip install --upgrade pip
-            pip install flake8 pytest
-            if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-         ref: # branch
+         python-version: 3 #install the python needed
+           ref: # branch
             sel-test
       - name: execute py script # run file
         run: |
