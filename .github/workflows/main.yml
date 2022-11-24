@@ -1,5 +1,8 @@
 name: py
- jobs:
+
+
+
+jobs:
   build:
     runs-on: ubuntu-latest
 
@@ -15,7 +18,7 @@ name: py
             python -m pip install --upgrade pip
             pip install flake8 pytest
             if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        ref: # branch
+         ref: # branch
             sel-test
       - name: execute py script # run file
         run: |
