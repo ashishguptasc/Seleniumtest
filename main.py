@@ -6,7 +6,7 @@ options = webdriver.ChromeOptions()
 options.add_argument('--ignore-ssl-errors=yes')
 options.add_argument('--ignore-certificate-errors')
 driver = webdriver.Remote(
-command_executor='http://sel-image-zpdttqpoxq-nn.a.run.app:4444/wd/hub',
+command_executor='https://sel-image-zpdttqpoxq-nn.a.run.app/wd/hub',
 options=options
 )
 #maximize the window size
