@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.common.exceptions import InvalidSessionIdException
 import time
 
 print("Test Execution Started")
